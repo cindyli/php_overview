@@ -1,0 +1,9 @@
+body {
+    padding-top: 1em;
+    width: 90%;
+    margin: auto auto;
+}
+
+input {
+    min-height: 2em;
+}
