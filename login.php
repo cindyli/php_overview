@@ -27,9 +27,18 @@ if(isset($_POST["username"]) && trim($_POST["username"]) != "")
 
 ?>
 
-<form action="" method="post">
-    <label>UserName :</label>
-    <input type="text" name="username" /><br />
-    
-    <input type="submit" value=" Submit "/><br />
-</form>
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="css/styles.css">
+<div class="navbar">
+    <div class="navbar-inner">
+        <label class="brand">UserName :</label>
+        <ul class="nav">
+            <li>
+                <form class="navbar-form pull-left" action="" method="post">
+                    <input type="text" name="username" />
+                    <button type="submit" class="btn" value="submit">Submit</button>
+                </form>
+            </li>
+        </ul>
+    </div>
+</div>
