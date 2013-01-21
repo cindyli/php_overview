@@ -30,28 +30,39 @@ $result = mysql_query($sql);
 <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="css/styles.css">
 <body>
-    <h1>Welcome <?php echo $username; ?></h1>
-    
-    <div class="navbar">
-        <div class="navbar-inner">
-            <label class="brand">Add places where you want to eat on Thursday:</label>
-            <ul class="nav">
-                <li>
-                    <form class="navbar-form pull-left" action="" method="post">
-                        <input type="text" name="place" />
-                        <button type="submit" class="btn" value="submit">Submit</button>
-                    </form>
-                </li>
-            </ul>
+    <div class="fadeout"></div>
+    <div class="topBar">
+        <h1>Welcome <?php echo $username; ?></h1>
+        
+        <div class="navbar">
+            <div class="navbar-inner">
+                <label class="brand">Add places where you want to eat on Thursday:</label>
+                <ul class="nav">
+                    <li>
+                        <form class="navbar-form pull-left" action="" method="post">
+                            <input type="text" name="place" />
+                            <button type="submit" class="btn" value="submit">Submit</button>
+                        </form>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
     
-    <?php
-    while ($row = mysql_fetch_assoc($result)) {
-        $myRow = ($row["username"] == $username) ? "alert-success" : "";
-        // Notice string concatenation using "."
-        echo "<div class='well " . $myRow . "'><h3>". $row["place_name"] ."</h3> was suggested by " . $row["username"] . " <div class='pull-right'> at " . $row["created_date"] . "</div></div>";
-    } 
-    ?>
+    <form class="results" action="" method="post>
+        <div class="results">
+            <?php
+            while ($row = mysql_fetch_assoc($result)) {
+                $myRow = $deleteIcon = "";
+                if ($row["username"] == $username) {
+                    $myRow = "alert-success";
+                    $deleteIcon = "<button class='close pull-left'>&times;</button>";
+                }
+                // Notice string concatenation using "."
+                echo "<div class='well " . $myRow . "'><h3>". $deleteIcon . "&nbsp;" . $row["place_name"] . "</h3> was suggested by " . $row["username"] . " <div class='pull-right'> at " . $row["created_date"] . "</div></div>";
+            } 
+            ?>
+        </div>
+    </form>
 
 </body>
