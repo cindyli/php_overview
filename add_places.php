@@ -27,22 +27,31 @@ $sql = "SELECT username, place_name, created_date
 $result = mysql_query($sql);
 ?>
 
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="css/styles.css">
 <body>
     <h1>Welcome <?php echo $username; ?></h1>
-
-    <form action="" method="post">
-        <label>Add places you wish to travel to:</label>
-        <input type="text" name="place" />
     
-        <input type="submit" value="Submit "/><br />
-    </form>
+    <div class="navbar">
+        <div class="navbar-inner">
+            <label class="brand">Add places where you want to eat on Thursday:</label>
+            <ul class="nav">
+                <li>
+                    <form class="navbar-form pull-left" action="" method="post">
+                        <input type="text" name="place" />
+                        <button type="submit" class="btn" value="submit">Submit</button>
+                    </form>
+                </li>
+            </ul>
+        </div>
+    </div>
     
-    <table>
     <?php
     while ($row = mysql_fetch_assoc($result)) {
+        $myRow = ($row["username"] == $username) ? "alert-success" : "";
         // Notice string concatenation using "."
-        echo "<span style=\"color: blue\">". $row["place_name"] ."</span> was added by " . $row["username"] . " at " . $row["created_date"] . "<br />";
+        echo "<div class='well " . $myRow . "'><h3>". $row["place_name"] ."</h3> was suggested by " . $row["username"] . " <div class='pull-right'> at " . $row["created_date"] . "</div></div>";
     } 
     ?>
-    </table>
+
 </body>
