@@ -3,7 +3,38 @@ body {
     width: 90%;
     margin: auto auto;
 }
-
 input {
     min-height: 2em;
+}
+.well:hover {
+    color: black;
+    border-color: black;
+}
+button.close {
+    padding-top: 0.4em;
+}
+button.close: hover {
+    color: black;
+}
+.results {
+    margin-top: 10em;
+}
+.topBar {
+    position: fixed;
+    z-index: 2;
+}
+.fadeout {
+    background: -moz-linear-gradient(center top , #FFFFFF, rgba(255, 255, 255, 0)) repeat scroll 0 0 transparent;
+    height: 15em;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 1;
+}
+
+a:focus, button:focus {
+    outline-color: black;
+    outline-width: 1px;
+    outline-style: solid;
 }
