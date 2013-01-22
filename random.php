@@ -21,16 +21,18 @@ if(isset($_SESSION["login_user"]) && trim($_SESSION["login_user"]) == $special_u
 
 <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="css/styles.css">
-<div class="navbar">
-    <div class="navbar-inner">
-        <ul class="nav">
-            <li>
-                <button type="submit" class="btn" value="submit">Go Back</button>
-            </li>
-        </ul>
+<form action="add_places.php">
+    <div class="navbar">
+        <div class="navbar-inner">
+            <ul class="nav">
+                <li>
+                    <button type="submit" class="btn" value="submit">Go Back</button>
+                </li>
+            </ul>
+        </div>
     </div>
-</div>
-
-<div class="well alert-success">
-    Aha! We are going to <h2><?php echo $place; ?></h2>
-</div>
+    
+    <div class="well alert-success">
+        Aha! We are going to <h2><?php echo $place; ?></h2>
+    </div>
+</form>

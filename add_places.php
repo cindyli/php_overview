@@ -47,7 +47,9 @@ $result = mysql_query($sql);
                     <?php if($username == $special_user) { ?>
                     <li class="divider-vertical"></li>
                     <li>
-                        <button type="submit" class="btn" value="submit">Pick a random place from the list</button>
+                        <form class="navbar-form" action="random.php" method="post">
+                            <button type="submit" class="btn" value="submit">Pick a random place from the list</button>
+                        </form>
                     </li>
                     <?php } ?>
                 </ul>
