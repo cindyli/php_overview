@@ -44,6 +44,12 @@ $result = mysql_query($sql);
                             <button type="submit" class="btn" value="submit">Submit</button>
                         </form>
                     </li>
+                    <?php if($username == $special_user) { ?>
+                    <li class="divider-vertical"></li>
+                    <li>
+                        <button type="submit" class="btn" value="submit">Pick a random place from the list</button>
+                    </li>
+                    <?php } ?>
                 </ul>
             </div>
         </div>
