@@ -25,6 +25,7 @@ button.close: hover {
 }
 .fadeout {
     background: -moz-linear-gradient(center top , #FFFFFF, rgba(255, 255, 255, 0)) repeat scroll 0 0 transparent;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255,1)), to(rgba(255, 255, 255,0)));
     height: 15em;
     left: 0;
     position: fixed;
