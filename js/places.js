@@ -49,8 +49,8 @@
     });
     
     // Auto refresh
-//    setInterval(function () {
-//        refreshResults();
-//    }, 3000);
+    setInterval(function () {
+        refreshResults();
+    }, 3000);
     
 })(jQuery);
