@@ -21,7 +21,7 @@ if(isset($_SESSION["login_user"]) && trim($_SESSION["login_user"]) == $special_u
 
 <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="css/styles.css">
-<form action="add_places.php">
+<form action="places.php">
     <div class="navbar">
         <div class="navbar-inner">
             <ul class="nav">

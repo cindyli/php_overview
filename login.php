@@ -19,24 +19,32 @@ if(isset($_POST["username"]) && trim($_POST["username"]) != "") {
     }
     $_SESSION["login_user"] = $myusername;
 
-    header("location: add_places.php");
+    header("location: places.php");
     exit;
 }
 
 ?>
+<html>
+<head>
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
 
-<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-<link rel="stylesheet" type="text/css" href="css/styles.css">
-<div class="navbar">
-    <div class="navbar-inner">
-        <label class="brand">UserName :</label>
-        <ul class="nav">
-            <li>
-                <form class="navbar-form pull-left" action="" method="post">
-                    <input type="text" name="username" />
-                    <button type="submit" class="btn" value="submit">Submit</button>
-                </form>
-            </li>
-        </ul>
+<body>
+    <div class="navbar">
+        <div class="navbar-inner">
+            <label class="brand">UserName :</label>
+            <ul class="nav">
+                <li>
+                    <form class="navbar-form pull-left" action="" method="post">
+                        <input type="text" name="username" />
+                        <button type="submit" class="btn" value="submit">Submit</button>
+                    </form>
+                </li>
+            </ul>
+        </div>
     </div>
-</div>
+</body>
+
+</html>
